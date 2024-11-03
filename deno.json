@@ -1,0 +1,18 @@
+{
+  "nodeModulesDir": "auto",
+  "tasks": {
+    "start": "deno run cli-app/main.ts",
+    "abi-gen": "deno run -RW abi/script.ts",
+    "compile": "hardhat compile && deno run abi-gen",
+    "vars-set": "deno run -A --node-modules-dir npm:hardhat vars set"
+  },
+  "imports": {
+    "@cliffy/table": "jsr:@cliffy/table@1.0.0-rc.7",
+    "@nomicfoundation/hardhat-toolbox-viem": "npm:@nomicfoundation/hardhat-toolbox-viem@^3.0.0",
+    "@nomicfoundation/hardhat-ignition": "npm:@nomicfoundation/hardhat-ignition@^0.15.7",
+    "@nomicfoundation/hardhat-viem": "npm:@nomicfoundation/hardhat-viem@^2.0.5",
+    "@cliffy/command": "jsr:@cliffy/command@1.0.0-rc.7",
+    "hardhat": "npm:hardhat@^2.22.15",
+    "viem": "npm:viem@^2.21.38"
+  }
+}
